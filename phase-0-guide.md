@@ -600,12 +600,21 @@ gcloud iam workload-identity-pools providers create-oidc "github-provider" --loc
 
 # Allow the GitHub repo to impersonate the service account
 # REPLACE: your-github-username/fintech-platform with your actual repo
-gcloud iam service-accounts add-iam-policy-binding \
-  terraform-ci@fintech-platform-lab.iam.gserviceaccount.com \
-  --role="roles/iam.workloadIdentityUser" \
-  --member="principalSet://iam.googleapis.com/projects/483262637629/locations/global/workloadIdentityPools/github-pool/attribute.repository/arunponugoti1/fintech-platform" \
+gcloud iam service-accounts add-iam-policy-binding `
+  terraform-ci@fintech-platform-lab.iam.gserviceaccount.com `
+  --role="roles/iam.workloadIdentityUser" `
+  --member="principalSet://iam.googleapis.com/projects/483262637629/locations/global ` workloadIdentityPools/github-pool/attribute.repository/arunponugoti1/fintech-platform" `
   --project=fintech-platform-lab
 ```
+gcloud iam service-accounts add-iam-policy-binding `
+terraform-ci@fintech-platform-lab.iam.gserviceaccount.com `
+--role="roles/iam.workloadIdentityUser" `
+--member="principalSet://iam.googleapis.com/projects/483262637629/locations/global/workloadIdentityPools/github-pool/attribute.repository/arunponugoti1/fintech-platform" `
+--project=fintech-platform-lab
+
+===============
+
+
 
 ---
 
@@ -707,7 +716,7 @@ GKE on Google Cloud Platform as primary (and for now, only) cloud.
 Create `journal/phase-0.md`:
 
 ```markdown
-# Phase 0 Journal: The Foundation
+# Phase 0 Journal: The Foundation docs
 
 ## Date Started:
 ## Date Completed:

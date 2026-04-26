@@ -33,7 +33,7 @@ resource "google_compute_subnetwork" "gke" {
 
   # Enable private Google access — pods can reach Google APIs
   # without a public IP. Security requirement for fintech.
-  private_google_access = true
+  private_ip_google_access = true
 }
 
 # Cloud NAT — gives private nodes outbound internet access
