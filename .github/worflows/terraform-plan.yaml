@@ -60,7 +60,7 @@ jobs:
         run: terragrunt run-all plan --terragrunt-non-interactive -no-color 2>&1 | tee plan_output.txt
         continue-on-error: true
 
-      # Post the plan as a PR comment — reviewers see exactly what changes
+      # Post the plan as a PR comment — reviewers see exactly what changesss
       - name: Comment Plan on PR
         uses: actions/github-script@v7
         with:
