@@ -39,7 +39,7 @@ jobs:
       - name: Authenticate to GCP
         uses: google-github-actions/auth@v2
         with:
-          workload_identity_provider: 'projects/YOUR_PROJECT_NUMBER/locations/global/workloadIdentityPools/github-pool/providers/github-provider'
+          workload_identity_provider: 'projects/483262637629/locations/global/workloadIdentityPools/github-pool/providers/github-provider'
           service_account: 'terraform-ci@fintech-platform-lab.iam.gserviceaccount.com'
 
       - name: Setup Terraform
